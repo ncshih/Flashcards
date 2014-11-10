@@ -1,6 +1,6 @@
 // this file opens windows when the chrome app starts.
 
-chrome.app.runtime.onLaunched.addListener(function() {
+chrome.runtime.onInstalled.addListener(function() {
   chrome.app.window.create('preferences.html', {
   	'bounds': {
   		'width':400,

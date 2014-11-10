@@ -1,4 +1,4 @@
 Flashcards
 ==========
 
-An easy-to-use flashcard application for younger kids.
+An easy-to-use flashcard application for kids.

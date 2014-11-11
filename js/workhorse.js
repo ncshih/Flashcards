@@ -43,8 +43,6 @@ topFolder.addDeck(currentDeck);
 var currentFlashcard;
 
 
-var makingCard = false;
-
 
 //Jquery Stuff
 //btns- btnPlayDeck, btnOpenCardEditor, btnCreateCard, btnOpenPreview, btnClosePreview
@@ -68,8 +66,11 @@ $(document).ready(function() {
 		console.log("play the deck");
 	});
 
-	$('btnCreateCard').click(function() {
-		
+	$('#btnCreateCard').click(function() {
+		var FRONT = $('#frontside').val();
+		var BACK = $('#backside').val();
+		currentDeck.addFlashcard(new Flashcard(FRONT,BACK));
+		chrome.app.window.current().close();
 	});
 
 

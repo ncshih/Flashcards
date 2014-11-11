@@ -47,7 +47,7 @@ var BACK;
 
 
 //Jquery Stuff
-//btns- btnPlayDeck, btnOpenCardEditor, btnCreateCard, btnOpenPreview, btnClosePreview
+//btns- btnPlayDeck, btnOpenCardEditor, btnCreateCard
 $(document).ready(function() {
 	$("#btnOpenCardEditor").click(function() {
 		console.log("open a new mkFlashcard window");
@@ -71,32 +71,11 @@ $(document).ready(function() {
 		console.log(BACK);
 		currentFlashcard = new Flashcard(FRONT,BACK);
 		currentDeck.addFlashcard(currentFlashcard);
+		console.log(currentFlashcard);
 		chrome.app.window.current().close();
 	});
 
-	$('#btnOpenPreview').click(function() {
-		console.log("open a new preview window");
-		chrome.app.window.create('preview.html', {
-			'bounds': {
-				'width':400,
-				'height':500
-			},
-			'id':"preWindow"
-			
-		}, function() {
-			console.log($('#frontside'));
-			console.log($('#frontPreview').length);
-		});
-
-
-		var $FRONTp = $('#frontPreview');
-		var $BACKp = $('#backPreview');
-		var FRONT = $('#frontside').val();
-		var BACK = $('#backside').val();
-		$FRONTp.html("something else");
-		$BACKp.html(BACK);
-
-	});
+ 
 
 
 

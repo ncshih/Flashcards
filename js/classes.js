@@ -10,8 +10,9 @@ function Folder() {
 	};
 }
 
-function Deck() {
+function Deck(name) {
 	var cards = [];
+	this.name = name;
 	this.addFlashcard = function(Flashcard) {
 		cards.push(Flashcard);
 	};

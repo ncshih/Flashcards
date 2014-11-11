@@ -24,7 +24,8 @@ $(document).ready(function() {
 		currentFlashcard = new Flashcard(FRONT,BACK);
 		currentDeck.addFlashcard(currentFlashcard);
 		console.log(currentFlashcard);
-		chrome.app.window.current().close();
+		save(currentDeck.name,currentDeck);
+		//chrome.app.window.current().close();
 	});
 
  

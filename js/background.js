@@ -22,7 +22,7 @@ chrome.app.runtime.onLaunched.addListener(function() {
 
 
 var topFolder = new Folder();
-var currentDeck = new Deck();
+var currentDeck = new Deck("FirstDeck");
 topFolder.addDeck(currentDeck);
 var currentFlashcard;
 var previewFlashcard;

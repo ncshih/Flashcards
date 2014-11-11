@@ -41,25 +41,24 @@ var topFolder = new Folder();
 var currentDeck = new Deck();
 topFolder.addDeck(currentDeck);
 var currentFlashcard;
-
+var previewFlashcard;
+var FRONT;
+var BACK;
 
 
 //Jquery Stuff
 //btns- btnPlayDeck, btnOpenCardEditor, btnCreateCard, btnOpenPreview, btnClosePreview
 $(document).ready(function() {
 	$("#btnOpenCardEditor").click(function() {
-		//Check to make sure the default string is not in the textarea(s), then add both sides to a bank of cards
 		console.log("open a new mkFlashcard window");
-		//if we are not making a card at the moment
+		chrome.app.window.create('mkFlashcard.html', {
+			'bounds': {
+				'width':400,
+				'height': 500
+			},
+			'id':"mkFlashcardWindow"
+		});
 
-			makingCard = true;
-			chrome.app.window.create('mkFlashcard.html', {
-				'bounds': {
-					'width':400,
-					'height': 500
-				},
-				'id':"mkFlashcardWindow"
-			});
 	});
 
 	$("#btnPlayDeck").click(function() {
@@ -67,10 +66,36 @@ $(document).ready(function() {
 	});
 
 	$('#btnCreateCard').click(function() {
+		FRONT = $('#frontside').val();
+		BACK = $('#backside').val();
+		console.log(BACK);
+		currentFlashcard = new Flashcard(FRONT,BACK);
+		currentDeck.addFlashcard(currentFlashcard);
+		chrome.app.window.current().close();
+	});
+
+	$('#btnOpenPreview').click(function() {
+		console.log("open a new preview window");
+		chrome.app.window.create('preview.html', {
+			'bounds': {
+				'width':400,
+				'height':500
+			},
+			'id':"preWindow"
+			
+		}, function() {
+			console.log($('#frontside'));
+			console.log($('#frontPreview').length);
+		});
+
+
+		var $FRONTp = $('#frontPreview');
+		var $BACKp = $('#backPreview');
 		var FRONT = $('#frontside').val();
 		var BACK = $('#backside').val();
-		currentDeck.addFlashcard(new Flashcard(FRONT,BACK));
-		chrome.app.window.current().close();
+		$FRONTp.html("something else");
+		$BACKp.html(BACK);
+
 	});
 
 

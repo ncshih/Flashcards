@@ -2,13 +2,18 @@
 <html>
   <head>
   	<script src="js/jquery-1.11.1.min.js"></script>
-  	<script type="text/javascript" src="js/workhorse.js"></script>
+  	<script type="text/javascript" src="js/buttons.js"></script>
+    <script type="text/javascript" src="js/classes.js"></script>
   	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
   </head>
   <body>
     <h1>DEBUG: onLaunch window</h1><br>
 
-    <div class="btn" id="btnPlayDeck">Play</div>
-    <div class="btn" id="btnOpenCardEditor">Add Flashcard</div>
+    <button  id="btnPlayDeck">Play</button>
+    <button  id="btnOpenCardEditor">Add Flashcard</button>
+    <footer id="info">
+      <button id="toggleAlarm">Activate alarm</button>
+      <button id="exportToDisk">Export to disk</button>
+      <div id="status"></div>
   </body>
 </html>

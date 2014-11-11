@@ -17,3 +17,14 @@ chrome.app.runtime.onLaunched.addListener(function() {
     }
   });
 });
+
+//Initialization stuff
+
+
+var topFolder = new Folder();
+var currentDeck = new Deck();
+topFolder.addDeck(currentDeck);
+var currentFlashcard;
+var previewFlashcard;
+var FRONT;
+var BACK;

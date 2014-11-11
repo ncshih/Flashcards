@@ -7,18 +7,30 @@ a  {
 }
 
 div {
-	
+	text-decoration: none;
+	color: #3D59AB;
+	font-family: Verdana, sans-serif;
 }
 
-#btnNewCard {
+.btn {
 	border-radius: 5px;
 	border: 2px solid #6495ED;
 	background-color: #BCD2EE;
-	height: 50px;
-	width: 120px;
+/*	height: 50px;
+	width: 120px;*/
 	margin: auto;
 	text-align: center;
-	float:left;
+	display: inline-block;
+	clear:both;
+}
+#btnNewCard {
+
+}
+#btnPlayDeck {
+
+}
+#btnCreateCard {
+
 }
 
 input {
@@ -27,8 +39,9 @@ input {
 }
 
 textarea {
-	rows:4;
-	cols:5;
+	width:100%;
+	height:45%;
+	clear:both;
 }
 
 #frontside {

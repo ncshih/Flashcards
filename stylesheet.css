@@ -20,3 +20,17 @@ div {
 	text-align: center;
 	float:left;
 }
+
+input {
+/*	height:100px;
+*/	width: 100;
+}
+
+textarea {
+	rows:4;
+	cols:5;
+}
+
+#frontside {
+	autofocus: true;
+}

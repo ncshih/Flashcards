@@ -15,6 +15,7 @@ $(document).ready(function() {
 
 	$("#btnPlayDeck").click(function() {
 		console.log("play the deck");
+
 	});
 
 	$('#btnCreateCard').click(function() {
@@ -25,7 +26,12 @@ $(document).ready(function() {
 		currentDeck.addFlashcard(currentFlashcard);
 		console.log(currentFlashcard);
 		save(currentDeck.name,currentDeck);
-		//chrome.app.window.current().close();
+		chrome.app.window.current().close();
+	});
+	$("#selector").click(function() {
+		console.log("you clicked the dropdown list");
+		//could add initialization for the decks here.  
+		init();
 	});
 
  

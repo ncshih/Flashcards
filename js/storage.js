@@ -5,8 +5,8 @@ function save(valname, thevalue) {
 	});
 }
 function get() {
+	console.log("getted");
 	chrome.storage.sync.get(null,function(items) {
-		message('stuff retrieved');
-		console.log(items);
+		return items;
 	});
 }

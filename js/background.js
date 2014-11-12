@@ -18,13 +18,26 @@ chrome.app.runtime.onLaunched.addListener(function() {
   });
 });
 
-//Initialization stuff
-
-
-var topFolder = new Folder();
-var currentDeck = new Deck("FirstDeck");
-topFolder.addDeck(currentDeck);
+var topFolder;
+var currentDeck;
 var currentFlashcard;
-var previewFlashcard;
 var FRONT;
 var BACK;
+
+//Initialization stuff
+function init() {
+	console.log("initted");
+	var localshit = get();
+	console.log(localshit);
+	// for (obj in localshit) {
+	// 	console.log(obj);
+	// }
+
+}
+
+
+
+
+
+
+

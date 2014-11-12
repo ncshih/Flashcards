@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<script src="js/jquery-1.11.1.min.js"></script>
-  	<script type="text/javascript" src="js/buttons.js"></script>
-    <script type="text/javascript" src="js/classes.js"></script>
-    <script type="text/javascript" src="js/storage.js"></script>
-    <script type="text/javascript" src="js/background.js"></script>
+
 
   	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
   </head>
   <body>
     <h1>DEBUG: onLaunch window</h1><br>
-
+    <select id="selector">
+      <option>Default Deck</option>
+    </select>
     <button  id="btnPlayDeck">Play</button>
     <button  id="btnOpenCardEditor">Add Flashcard</button>
     <footer id="info">
       <button id="toggleAlarm">Activate alarm</button>
       <button id="exportToDisk">Export to disk</button>
       <div id="status"></div>
+    </footer>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/buttons.js"></script>
+    <script type="text/javascript" src="js/classes.js"></script>
+    <script type="text/javascript" src="js/storage.js"></script>
+    <script type="text/javascript" src="js/background.js"></script>
+
+
   </body>
 </html>
